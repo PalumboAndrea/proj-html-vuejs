@@ -32,7 +32,7 @@ export default {
 @use './bootstrap/scss/bootstrap.scss' as *; 
 @use '../src/styles/general.scss' as *;
 @use '../src/styles/partials/variables' as *;
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100&display=swap');
 
 *{
   font-family: 'Roboto', sans-serif;
