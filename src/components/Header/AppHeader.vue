@@ -28,7 +28,7 @@ export default {
             </div>
             <div id="upcoming-events" class="col-3 d-flex align-items-center">
                 <font-awesome-icon icon="fa-solid fa-bars" class="menu-icon me-4"/>
-                <button class="py-2 px-4 d-flex align-items-center">
+                <button class="py-2 px-4 d-flex align-items-center black-button">
                     <font-awesome-icon icon="fa-solid fa-helmet-un" class="helmet-icon"/>
                     <span class="mx-2">
                         Upcoming Events
@@ -45,27 +45,21 @@ export default {
 <style lang="scss" scoped>
 
     #header-container{
-        height: 10vh;
+        height: 8vh;
         img{
             transform: scale(0.8);
         }
-        
     }
-
-
-   
     #header-menu{
         p{
             font-weight: 400;
         }
-        
     }
-
     #upcoming-events{
         .menu-icon{
             font-size: 1.5rem;
         }
-        button{
+        .black-button{
             color: white;
             background-color: rgb(0,0,0);
             border: none;

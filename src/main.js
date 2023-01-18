@@ -9,10 +9,12 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { faHelmetUn } from '@fortawesome/free-solid-svg-icons'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faCircleLeft } from '@fortawesome/free-solid-svg-icons'
+import { faCircleRight } from '@fortawesome/free-solid-svg-icons'
 
 
 /* add icons to the library */
-library.add(faBars, faHelmetUn, faArrowRight)
+library.add(faBars, faHelmetUn, faArrowRight, faCircleLeft, faCircleRight)
 
 createApp(App)
 .component('font-awesome-icon', FontAwesomeIcon)
