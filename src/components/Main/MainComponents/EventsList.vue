@@ -83,7 +83,7 @@ export default {
 </script>
 
 <template>
-    <div class="container text-center">
+    <div class="container text-center pb-5">
         <div class="title">
             Don't Miss Our Events!
         </div>
