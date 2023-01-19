@@ -21,11 +21,13 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faAward } from '@fortawesome/free-solid-svg-icons'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import { faX } from '@fortawesome/free-solid-svg-icons'
-
+import { faPhoneVolume } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
 
 /* add icons to the library */
 library.add(faBars, faHelmetUn, faArrowRight, faCircleLeft, faCircleRight, faAngleLeft, faAngleRight, faClock, faLocationDot, faTwitter, faFacebook, faInstagram,
-    faAward, faCheck, faX)
+    faAward, faCheck, faX, faPhoneVolume, faEnvelope, faFacebookF)
 
 createApp(App)
 .component('font-awesome-icon', FontAwesomeIcon)
