@@ -13,9 +13,12 @@ import { faCircleLeft } from '@fortawesome/free-solid-svg-icons'
 import { faCircleRight } from '@fortawesome/free-solid-svg-icons'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { faClock } from '@fortawesome/free-solid-svg-icons'
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
+
 
 /* add icons to the library */
-library.add(faBars, faHelmetUn, faArrowRight, faCircleLeft, faCircleRight, faAngleLeft, faAngleRight)
+library.add(faBars, faHelmetUn, faArrowRight, faCircleLeft, faCircleRight, faAngleLeft, faAngleRight, faClock, faLocationDot)
 
 createApp(App)
 .component('font-awesome-icon', FontAwesomeIcon)
