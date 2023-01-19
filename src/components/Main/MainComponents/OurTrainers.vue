@@ -75,7 +75,7 @@ export default {
     @use '../src/styles/general.scss' as *;
 
     .container-fluid{
-        background: linear-gradient(to bottom, rgb(251,251,251) 0%, rgb(251,251,251) 30%, white 20%, white 100%);
+        background: linear-gradient(to bottom, rgb(251,251,251) 0%, rgb(251,251,251) 40%, white 20%, white 100%);
 
         .my-card{
             width: calc(100% / 4);

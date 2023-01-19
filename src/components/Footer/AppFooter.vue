@@ -14,11 +14,14 @@ export default {
 </script>
 
 <template>
-    <div id="footer-container" class="container-fluid">
-        <div class="container d-flex py-4">
+    <div id="footer-container" class="container-fluid pb-4">
+        <div class="container d-flex py-5 justify-content-between">
             <AddressAndContact />
             <NewsLetter />
             <Links />
+        </div>
+        <div class="text-center">
+            © 2022 Gobike - All rights Reserved.
         </div>
     </div>
 </template>

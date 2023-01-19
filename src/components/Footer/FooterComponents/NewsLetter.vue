@@ -7,9 +7,9 @@ export default {
 
 <template>
     <div id="newsletter-wrapper">
-        <p class="m-0">
+        <h3 class="m-0">
             Join Our Newsletter
-        </p>
+        </h3>
         <p>
             Subscribe to receive useful information.
         </p>
@@ -27,7 +27,11 @@ export default {
 
 <style lang="scss" scoped>
 
-    p:first-child{
+    #newsletter-wrapper{
+        width: 450px;
+    }
+
+    h3{
         font-size: 2rem;
         font-weight: 500;
     }
