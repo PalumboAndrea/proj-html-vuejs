@@ -11,10 +11,11 @@ import { faHelmetUn } from '@fortawesome/free-solid-svg-icons'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { faCircleLeft } from '@fortawesome/free-solid-svg-icons'
 import { faCircleRight } from '@fortawesome/free-solid-svg-icons'
-
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
-library.add(faBars, faHelmetUn, faArrowRight, faCircleLeft, faCircleRight)
+library.add(faBars, faHelmetUn, faArrowRight, faCircleLeft, faCircleRight, faAngleLeft, faAngleRight)
 
 createApp(App)
 .component('font-awesome-icon', FontAwesomeIcon)
