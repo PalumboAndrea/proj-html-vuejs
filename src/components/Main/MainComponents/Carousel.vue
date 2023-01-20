@@ -1,33 +1,57 @@
 <script>
+import {store} from '../../../../store'
 
 export default {
+    data(){
+        return{
+            store,
+            imgPathIndex: 0,
+            imgPath: [
+                'slider-bike-4.jpg',
+                'slider-bike-9.jpg',
+                'slider-bike-12.jpg',
+            ]
+        }
+    },
+    methods: {
+        minusImgPathIndex(){
+            if(this.imgPathIndex == 0){
+                this.imgPathIndex = (this.imgPath.length - 1);
+            } else {
+                this.imgPathIndex--;
+            }
+        },
+        plusImgPathIndex(){
+            if(this.imgPathIndex == (this.imgPath.length - 1)){
+                this.imgPathIndex = 0;
+            } else {
+                this.imgPathIndex++;
+            }
+        }
+    },
     
 }
 </script>
 
 <template>
-    <div id="carousel-wrapper" class="container-fluid p-0">
-        <div id="carousel" class="container h-100">
-            <div class="row h-100 d-flex align-items-center">
-                <img src="../../../assets/img/slider-bike-9.jpg" alt="slider-photo">
-                <div class="col-1 d-flex justify-content-center">
-                    <font-awesome-icon icon="fa-solid fa-circle-left" class="icon-arrow"/>
-                </div>
-                <div class="col-4 ps-5">
-                    <p class="m-0">
-                        Professional Cycling Club
-                    </p>
-                    <span>
-                        Learn cycling from the pros.
-                    </span>
-                    <button class="btn btn-primary py-4 px-5 mt-4">Learn More
-                        <font-awesome-icon icon="fa-solid fa-arrow-right" />
-                    </button>
-                </div>
-                <div class="col-1 offset-6 d-flex justify-content-center">
-                    <font-awesome-icon icon="fa-solid fa-circle-right" class="icon-arrow"/>
-                </div>
-            </div>
+    <div id="carousel-wrapper" class="container-fluid d-flex align-items-center justify-content-between px-5">
+        <img :src="store.methods.getImagePath(imgPath[imgPathIndex])" alt="slider-photo">
+        <div class="icon-wrapper col-1">
+            <font-awesome-icon icon="fa-solid fa-angle-left" class="icon-arrow" @click="minusImgPathIndex()"/>
+        </div>
+        <div class="text-wrapper col-4">
+            <h2 class="big-title">
+                Professional Cycling Club
+            </h2>
+            <span class="subtitle-bold">
+                Learn cycling from the pros.
+            </span>
+            <button class="btn btn-primary py-3 px-5 mt-4 d-flex align-items-center">Learn More
+                <font-awesome-icon icon="fa-solid fa-arrow-right" class="ms-1"/>
+            </button>
+        </div>
+        <div class="icon-wrapper col-1 offset-6">
+            <font-awesome-icon icon="fa-solid fa-angle-right" class="icon-arrow" @click="plusImgPathIndex()"/>
         </div>
     </div>
 </template>
@@ -38,16 +62,31 @@ export default {
     #carousel-wrapper{
         height: 80vh;
         color: white;
+        position: relative;
         img{
             padding: 0;
             position: absolute;
-            max-width: 100%;
+            width: 100%;
             height: 80vh;
             z-index: -1;
+            object-fit: cover;
             left: 0;
         }
-        .icon-arrow{
-            height: 30px;
+        .text-wrapper{
+            padding-left: 100px;
+        }
+        .icon-wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            border-radius: 5px;
+            height: 60px;
+            width: 60px;
+            .icon-arrow{
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
         }
         p{
             font-weight: 500;

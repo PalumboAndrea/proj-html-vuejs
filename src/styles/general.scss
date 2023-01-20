@@ -1,8 +1,17 @@
-.subtitle {
-    font-weight: 100;
+.big-title {
+    font-weight: 700;
+    font-size: 3rem;
 }
 
-.title {
+.subtitle-bold{
+    font-weight: 500;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+}
+
+.middle-title {
     font-weight: 700;
     font-size: 2rem;
 }
@@ -15,5 +24,9 @@
 
 .cards-subtitle{
     font-size: 0.85rem;
+}
+
+ul{
+    list-style-type: none;
 }
 

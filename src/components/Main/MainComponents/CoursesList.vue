@@ -32,9 +32,9 @@ export default {
 
 <template>
     <div id="courses-list-container" class="container d-flex flex-column align-items-center pb-5">
-        <p class="title mb-1">
+        <h3 class="big-title mb-1">
             Our Professional Cycling Trainings
-        </p>
+        </h3>
         <span class="light-grey-text">
             Learn from the mountain biking expert
         </span>
