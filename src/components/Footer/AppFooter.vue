@@ -27,13 +27,16 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../src/styles/general.scss' as *;
+@use '../src/styles/partials/variables' as *;
 
     *{
         color: white;
     }
 
     #footer-container{
-        background-color: black;
+        background-color: $main-bg-color;
+;
     
     }
     

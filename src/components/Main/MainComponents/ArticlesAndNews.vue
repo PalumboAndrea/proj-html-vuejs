@@ -37,9 +37,9 @@ export default {
 </script>
 
 <template>
-    <div id="articles-wrapper" class="container-fluid py-5">
+    <div id="articles-wrapper" class="container-fluid pt-5">
         <div class="container">
-            <p class="title text-center m-0">
+            <p class="big-title  text-center m-0">
                 Resent New & Articles
             </p>
             <p class="subtitle text-center m-0">
@@ -73,14 +73,24 @@ export default {
 
     #articles-wrapper{
         background-color: $light-grey-bgcolor;
+        padding-bottom: 120px;
 
         .single-article{
             width: calc(100% / 4);
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            height: 400px;
+            box-shadow: 3px 3px 13px 0 rgb(0 0 0 / 10%);
             border-radius: 8px;
+            position: relative;
 
             img{
                 width: 100%;
+            }
+
+            div{
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translate(-50%, 0)
             }
 
             button{

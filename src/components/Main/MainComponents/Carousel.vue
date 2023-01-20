@@ -34,13 +34,13 @@ export default {
 </script>
 
 <template>
-    <div id="carousel-wrapper" class="container-fluid d-flex align-items-center justify-content-between px-5">
+    <div id="carousel-wrapper" class="container-fluid d-flex align-items-center justify-content-between px-5 mb-4">
         <img :src="store.methods.getImagePath(imgPath[imgPathIndex])" alt="slider-photo">
         <div class="icon-wrapper col-1">
             <font-awesome-icon icon="fa-solid fa-angle-left" class="icon-arrow" @click="minusImgPathIndex()"/>
         </div>
         <div class="text-wrapper col-4">
-            <h2 class="big-title">
+            <h2 class="very-big-title">
                 Professional Cycling Club
             </h2>
             <span class="subtitle-bold">
@@ -79,7 +79,7 @@ export default {
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: black;
+            background-color: $main-bg-color;
             border-radius: 5px;
             height: 60px;
             width: 60px;

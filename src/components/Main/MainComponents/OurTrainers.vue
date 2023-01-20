@@ -14,7 +14,7 @@ export default {
                 {
                     name: 'Robert Lee',
                     role: 'Biker',
-                    img: 'biker2.jpg',
+                    img: 'biker4.jpg',
                 },
                 {
                     name: 'John Doe',
@@ -24,7 +24,7 @@ export default {
                 {
                     name: 'Emily Brown',
                     role: 'Biker',
-                    img: 'biker4.jpg',
+                    img: 'biker2.jpg',
                 },
             ]
         }
@@ -35,32 +35,35 @@ export default {
 
 <template>
     <div class="container-fluid">
-        <div class="container text-center py-5">
+        <div class="container text-center py-4">
             <div class="tile-container">
-                <p class="title">
+                <p class="big-title m-0">
                     Our Expert Trainers
                 </p>
                 <p class="subtitle">
                     Learn to ride a bike from the experts.
                 </p>
             </div>
-            <div class="cards-container d-flex">
-                <div class="my-card m-2" v-for="trainer in trainersList">
-                    <img :src="store.methods.getImagePath(trainer.img)" class="mb-4" alt="Trainer">
-                    <div class="card-body">
-                        <p class="card-trainer-name mb-1">
-                            {{ trainer.name }}
-                        </p>
-                        <p class="card-trainer-role mb-2">
-                            {{ trainer.role }}
-                        </p>
-                        <p class="px-2">
-                            <font-awesome-icon icon="fa-brands fa-facebook"/>
-                            <font-awesome-icon icon="fa-brands fa-instagram" class="icon-social ms-2"/>
-                            <font-awesome-icon icon="fa-brands fa-twitter" class="icon-social ms-2"/>
-                        </p>
+            <div class="cards-container d-flex mt-4">
+                <div class="cards-wrapper m-2 d-flex justify-content-center align-items-center" v-for="trainer in trainersList">
+                    <div class="my-card">
+                        <img :src="store.methods.getImagePath(trainer.img)" class="mb-4" alt="Trainer">
+                        <div class="card-body">
+                            <p class="card-trainer-name mb-1">
+                                {{ trainer.name }}
+                            </p>
+                            <p class="card-trainer-role mb-2">
+                                {{ trainer.role }}
+                            </p>
+                            <p class="px-2">
+                                <font-awesome-icon icon="fa-brands fa-facebook"/>
+                                <font-awesome-icon icon="fa-brands fa-instagram" class="icon-social ms-2"/>
+                                <font-awesome-icon icon="fa-brands fa-twitter" class="icon-social ms-2"/>
+                            </p>
+                        </div>
                     </div>
                 </div>
+                
 
             </div>
             
@@ -77,34 +80,43 @@ export default {
     .container-fluid{
         background: linear-gradient(to bottom, rgb(251,251,251) 0%, rgb(251,251,251) 40%, white 20%, white 100%);
 
-        .my-card{
+        .cards-wrapper{
+            background-color: rgb(247,247,247);
             width: calc(100% / 4);
-            border: 10px solid rgb(247,247,247);
-            background-color: black;
-            color: white;
+            height: 400px;
+            .my-card{
+                width: 95%;
+                height: 95%;
+                background-color: $main-bg-color;
+                color: white;
 
-
-           img{
-            width: 100%;
-            object-fit:cover;
-            object-position: top;
-            height: 220px;
-           }
+                &:hover{
+                    border-radius: 5px;
+                }
             
-
-            .card-trainer-name{
-                font-weight: 500;
-                font-size: 1.2rem;
+                &:hover img{
+                    opacity: (0.4);
+                    height: 230px;
+                    transition: all .6s ease;
+                }
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: top;
+                    height: 240px;
+                }
+                .card-trainer-name{
+                    font-weight: 500;
+                    font-size: 1.2rem;
+                }
+                .card-trainer-role{
+                    color: grey;
+                    font-weight: 500;
+                }
             }
-
-            .card-trainer-role{
-                color: grey;
-                font-weight: 500;
-            }
-          
-
-           
         }
+
+        
         
     }
 

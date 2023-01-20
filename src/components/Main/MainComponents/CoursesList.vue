@@ -44,6 +44,11 @@ export default {
                 <div class="lesson-title">
                     {{ n.title }}
                 </div>
+                <div class="view">
+                    <span>
+                        View
+                    </span>
+                </div>
             </div>
         </div>
         <div class="arrows">
@@ -61,11 +66,19 @@ export default {
         padding-top: 200px;
 
         .my-card{
-            border: 8px solid black;
+            border: 8px solid $main-bg-color;
             border-radius: 0;
-
+            position: relative;
+            &:hover .view{
+                transition: all .5s ease;
+                filter: opacity(1);
+            }
+            &:hover img{
+                filter: brightness(80%);
+                transition: all .7s ease;
+            }
             img{
-                filter: brightness(70%);
+                filter: brightness(60%);
             }
             .lesson-title{
                 color: white;
@@ -74,6 +87,34 @@ export default {
                 left: 20px;
                 font-weight: 500;
                 font-size: 1.5rem;
+            }
+            .view{
+                filter: opacity(0);
+                color: white;
+                position: absolute;
+                height: 40px;
+                width: 110px;
+                cursor: pointer;
+                bottom: 20px;
+                left: 20px;
+                background-color: black;
+                span{
+                    font-weight: 700;
+                    font-size: 1.2rem;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                &:hover{
+                    transform: scale(0.98);
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                    transition: all .3s ease;
+                }
+                &:hover span{
+                    font-size: 1.15rem;
+                    transition: all .2s ease;
+                }
             }
         }
         .left-arrow,

@@ -12,11 +12,11 @@ export default {
 
 <template>
     <div class="container p-5 d-flex align-items-center">
-        <div class="position-relative">
+        <div class="position-relative me-5">
             <img :src="store.methods.getImagePath('bike-circle.png')" alt="bike-circle" id="bike-circle">
             <img :src="store.methods.getImagePath('bike-player.png')" alt="bike-player" id="bike-player">
         </div>
-        <div class="text-container pe-5">
+        <div class="text-container">
             <h3 class="middle-title mb-3">
                 Do you want to be a professional cyclist?
             </h3>
@@ -63,15 +63,23 @@ export default {
 <style lang="scss" scoped>
 @use '../src/styles/partials/variables' as *;
 
+@keyframes bike-circle-animation {
+    0% { transform: rotate( 0); }
+  100% { transform: rotate( 360deg); }
+}
+
     #bike-circle{
-        transform: scale(0.9);
+        height: 600px;
+        transform: scale(0.2);
+        animation: bike-circle-animation 15s linear infinite;
     }
 
     #bike-player{
         position: absolute;
-        transform: scale(0.9);
-        top: -50px;
-        left: 0;
+        transform: scale(0.8);
+        top: -100px;
+        left: 50%;
+        transform: translate(-50%) scale(0.8);
     }
 
     .text-container{
