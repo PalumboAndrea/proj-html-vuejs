@@ -46,7 +46,4 @@ export const store = reactive({
         
 
     }
-        
-
-    
 });

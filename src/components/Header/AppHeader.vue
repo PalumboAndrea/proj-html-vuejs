@@ -51,7 +51,7 @@ export default {
 </script>
 
 <template>
-   <div id="header-container" class="container">
+   <div id="header-container" class="container-fluid">
         <div class="row d-flex justify-content-center justify-content-between align-items-center h-100" @mouseleave="changeDropdownMenuIndex()">
             <div id="logo-container" class="col-2 d-flex align-items-center h-100">
                 <img :src="store.methods.getImagePath('logo-gobike.png')" alt="logo" class="h-100">
@@ -84,6 +84,10 @@ export default {
 @use '../src/styles/partials/variables' as *;
 
     #header-container{
+        padding: 0 150px;
+        position: fixed;
+        z-index: 3;
+        background-color: white;
         height: 10vh;
         img{
             transform: scale(0.8);

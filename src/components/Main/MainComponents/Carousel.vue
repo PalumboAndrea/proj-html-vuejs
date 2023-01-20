@@ -6,23 +6,32 @@ export default {
         return{
             store,
             imgPathIndex: 0,
-            imgPath: [
-                'slider-bike-4.jpg',
-                'slider-bike-9.jpg',
-                'slider-bike-12.jpg',
+            text: [
+                {
+                    title: 'Unforgettable Cycling Experience',
+                    img: 'slider-bike-4.jpg',
+                },
+                {
+                    title: 'Learn Mountain Bike From The Expert',
+                    img: 'slider-bike-9.jpg',
+                },
+                {
+                    title: 'Professional Cycling Club',
+                    img: 'slider-bike-12.jpg',
+                },
             ]
         }
     },
     methods: {
         minusImgPathIndex(){
             if(this.imgPathIndex == 0){
-                this.imgPathIndex = (this.imgPath.length - 1);
+                this.imgPathIndex = (this.text.length - 1);
             } else {
                 this.imgPathIndex--;
             }
         },
         plusImgPathIndex(){
-            if(this.imgPathIndex == (this.imgPath.length - 1)){
+            if(this.imgPathIndex == (this.text.length - 1)){
                 this.imgPathIndex = 0;
             } else {
                 this.imgPathIndex++;
@@ -35,13 +44,13 @@ export default {
 
 <template>
     <div id="carousel-wrapper" class="container-fluid d-flex align-items-center justify-content-between px-5 mb-4">
-        <img :src="store.methods.getImagePath(imgPath[imgPathIndex])" alt="slider-photo">
+        <img :src="store.methods.getImagePath(text[imgPathIndex].img)" alt="slider-photo">
         <div class="icon-wrapper col-1">
             <font-awesome-icon icon="fa-solid fa-angle-left" class="icon-arrow" @click="minusImgPathIndex()"/>
         </div>
-        <div class="text-wrapper col-4">
+        <div class="text-wrapper col-6">
             <h2 class="very-big-title">
-                Professional Cycling Club
+                {{text[imgPathIndex].title}}
             </h2>
             <span class="subtitle-bold">
                 Learn cycling from the pros.
@@ -50,7 +59,7 @@ export default {
                 <font-awesome-icon icon="fa-solid fa-arrow-right" class="ms-1"/>
             </button>
         </div>
-        <div class="icon-wrapper col-1 offset-6">
+        <div class="icon-wrapper col-1 offset-4">
             <font-awesome-icon icon="fa-solid fa-angle-right" class="icon-arrow" @click="plusImgPathIndex()"/>
         </div>
     </div>
@@ -60,14 +69,14 @@ export default {
 @use '../src/styles/partials/variables' as *;
 
     #carousel-wrapper{
-        height: 80vh;
+        height: 100vh;
         color: white;
         position: relative;
         img{
             padding: 0;
             position: absolute;
             width: 100%;
-            height: 80vh;
+            height: 100%;
             z-index: -1;
             object-fit: cover;
             left: 0;

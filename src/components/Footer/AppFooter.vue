@@ -15,7 +15,7 @@ export default {
 
 <template>
     <div id="footer-container" class="container-fluid pb-4">
-        <div class="container d-flex py-5 justify-content-between">
+        <div class="container d-flex pt-4 pb-5 justify-content-between">
             <AddressAndContact />
             <NewsLetter />
             <Links />
@@ -36,8 +36,6 @@ export default {
 
     #footer-container{
         background-color: $main-bg-color;
-;
-    
     }
     
 </style>

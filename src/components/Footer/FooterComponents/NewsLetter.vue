@@ -6,8 +6,8 @@ export default {
 </script>
 
 <template>
-    <div id="newsletter-wrapper">
-        <h3 class="m-0">
+    <div id="newsletter-wrapper" class="mt-3">
+        <h3 class="mb-2">
             Join Our Newsletter
         </h3>
         <p>
@@ -39,8 +39,8 @@ export default {
         .input-container{
             input{
                 width: 100%;
-                border-top-left-radius: 5px;
-                border-top-right-radius: 5px;
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
                 border: none;
                 height: 60px;
                 &:focus{
@@ -52,8 +52,8 @@ export default {
                 width: 100%;
                 border: none;
                 background-color: white;
-                border-top-left-radius: 5px;
-                border-top-right-radius: 5px;
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
                 height: 60px;
             }
         }

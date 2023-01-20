@@ -20,7 +20,7 @@ export default {
 
 <template>
 
-  <AppHeader />
+  <AppHeader class="pippo"/>
 
   <AppMain />
 
@@ -38,5 +38,6 @@ export default {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
+
 
 </style>

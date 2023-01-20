@@ -52,7 +52,7 @@ export default {
                 </div>
                 
             </div>
-            <button class="py-3 px-5">
+            <button class="py-4 px-5">
                 Get to know us
                 <font-awesome-icon icon="fa-solid fa-arrow-right" class="icon-arrow ms-2" />
             </button>
@@ -87,6 +87,7 @@ export default {
 
         button{
             @include black-button;
+
         }
         h4{
             font-weight: 700;

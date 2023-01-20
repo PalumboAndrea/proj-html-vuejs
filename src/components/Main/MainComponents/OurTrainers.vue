@@ -96,6 +96,7 @@ export default {
             
                 &:hover img{
                     opacity: (0.4);
+                    border-radius: 5px;
                     height: 230px;
                     transition: all .6s ease;
                 }
